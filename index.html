@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="Assets/FCPlus_Logo.png"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap_min.css">
+  <link rel="stylesheet" href="fontawesome_min.css"> <!--For Search icon-->
+  <script src="jquery_min.js"></script>
+  <script src="bootstrap_min.js"></script>
+  <link rel="stylesheet" href="IndexStyle.css">
+  <script src="Scripts/CountHandler.js"></script>
+ <link rel="stylesheet" href="fontawesome_6_4_2_min.css"> <!--For Robot icon-->
+</head>
+<body onload="countvisit()">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="logo">
+                <img src="Assets/Logo.jpg">
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="container search">
+                <input type="checkbox" id="check">
+                <div class="box">
+                    <input type="text" name=" " id="myInput" placeholder="Search Here..." onkeyup="searchFun()">
+                    <label for="check"><i class='fa fa-search'></i></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">        
+            <div class="dropdown localdropdown">
+                <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton1" type="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-expanded="false">            
+                    <!-- <span class="caret1" style="display:none"></span>
+                    <span id="useremail">Balaji Ram Kumar Mel Sevari</span>
+                    <span class="caret"></span> -->
+                    <p><span id="useremail">Rahul Rup Tejas Gopinath</span> <span class="caret"></span></p>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                        <asp:LinkButton ID="LinkButton1" runat="server" class="dropdown-item" OnClick="LinkButton1_Click">Logout</asp:LinkButton></li>                   
+                </ul>
+            
+            </div>           
+        </div>
+    </div>  
+</div>
+
+<div class="container-fluid" id="searchplatform">
+    <div class="row">
+        <h4 style="text-align:center;text-transform: uppercase;color:#E2000F;font-weight:600">Search Results</h4>
+        <table id="myTable">
+            <tr class="header">
+                <th>Name</th>
+                <th>Department</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>CFO</td>
+                <td>CFO & MIS</td>
+                <td><a href="CFO.html?og=in" target="_blank">click to view</a></td>
+            </tr>      
+            <tr>
+                <td>Chief Financial Officer</td>
+                <td>CFO & MIS</td>
+                <td><a href="CFO.html?og=in" target="_blank">click to view</a></td>
+            </tr> 
+            <tr>
+                <td>Daily Flash (APR)</td>
+                <td>CFO & MIS</td>
+                <td><a href="https://app.powerbi.com/groups/me/reports/386415c4-ddd2-4064-8c35-173e0a0db940/ReportSection10b5c5267deceb03c0ed?experience=power-bi" target="_blank">click to view</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="row" id="noresult">
+        <div class="alert alert-danger">
+            <strong>Sorry,</strong> we could not find any results matching with your input...
+          </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" id="dashboardplatform">
+    <div class="row content">        
+        <div class="welcome col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="container-fluid">
+                <div class="row" style="height:244px;">
+                    <div class="Panel col-xs-9 col-sm-9 col-md-9 col-lg-9" style="margin-top:24px">
+                        <h3 style="font-weight:bold;margin-top:0">Welcome to</h3>
+                        <h3 style="font-weight:bold;margin-top:0;margin-bottom:0;">Fluid Conveyance</h3>
+                        <img src="Assets/Line.png" style="height:4px"><br>
+                        <img src="Assets/FCPlus_Logo.png" style="width:150px;margin-top:2.5%;margin-left:22%">
+                    </div>
+                    <div class="Panel col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-top:24px">
+                        <img src="Assets/Mouse.svg" class="tab_img_mouse">
+                    </div>
+
+                </div>
+                <div class="row" style="height:44px">
+                    <div class="panel col-xs-12 col-sm-12 col-md-12 col-lg-12">                        
+                        <p class="blink-text">At your services just a click away!</p>
+                    </div>                    
+                </div>
+                <div class="row" style="height:200px">
+                    <div class="container buttonwelcome col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="CFO.html?og=in" style="text-decoration:none">
+                            <div class="row text-center" style="height:70px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>CFO & MIS</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px">
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 left">
+                                    <img src="Assets/CFO.svg" class="cfoicons">
+                                </div>
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                                    <img src="Assets/MIS.svg" class="cfoicons">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container buttonwelcome mgtop col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="row text-center" style="height:60px">
+                                <p style="margin-top:10px"><strong>Your Solution<br>Next Door</strong></p>                              
+                            </div>
+                            <div class="row text-center" style="height:60px">
+                                <img src="Assets/gcsdoor.svg" style="width:60px;height:60px">
+                            </div>
+                            <div class="row text-center" style="height:60px">
+                                <p id="gcs"><strong>Global Competency Services</strong></p>                              
+                            </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="container-fluid">
+                <div class="row" style="height:250px">
+                    <div class="container buttonse col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="Admin_India.html" style="text-decoration:none">
+                            <div class="row text-center" style="height:70px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>Admin</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px;margin-top: 4%">
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 leftimg">
+                                    <img src="Assets/Mobile.svg" style="width:50px;height:50px;">
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                    <img src="Assets/Car.svg" style="width:50px;height:50px;">
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 rightimg">
+                                    <img src="Assets/Globe.svg" style="width:50px;height:50px;">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container buttonse col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="Safety_India.html" style="text-decoration:none">
+                            <div class="row text-center" style="height:70px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>EHS</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px">
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 left">
+                                    <img src="Assets/Safety.svg" class="cfoicons">
+                                </div>
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                                    <img src="Assets/SafetyHelmet.svg" class="cfoicons">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container buttonse col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="RealEstate_India.html" style="text-decoration:none">
+                            <div class="row text-center" style="height:70px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>Real Estate, Infrastructure & ESG</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px">
+                                <img src="Assets/RealEstate.svg" class="cfoicons">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="height:250px">
+                    <div class="container buttonse col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="IndirectProcurement_India.html" style="text-decoration:none">
+                            <div class="row text-center" style="height:70px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>Indirect<br>Procurement</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px">
+                                <img src="Assets/IndirectProcurement.svg" class="cfoicons">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container buttonse col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="Transportation_India.html" style="text-decoration:none">
+                            <div class="row text-center" style="height:70px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>Transport & Canteen</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px">
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 left">
+                                    <img src="Assets/Transport.svg" class="cfoicons">
+                                </div>
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                                    <img src="Assets/Canteen.svg" class="cfoicons">
+                                </div>
+                            </div>
+                        </a>        
+                    </div>
+                <!--<div class="container buttonseanim col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="IndirectProcurement_India.html" style="text-decoration:none">
+                            <div class="row text-center" style="height:70px">
+                                <p style="margin-top:21px" class="shineanim"><strong>Book your Meal</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px">
+                                <svg class="svganim"
+                                width ="50"
+                                height ="50"
+                                xmlns="http://www.w3.org/2000/svg" 
+                                xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                xml:space="preserve" 
+                                overflow="hidden">
+                                <g transform="translate(-592 -312)">
+                                <path d="M606.578 333.188C607.108 333.181 607.637 333.223 608.158 333.315L608.989 333.481C609.559 333.595 610.081 333.881 610.484 334.3L612.284 336.164 613.011 335.478 611.204 333.605C610.659 333.04 609.955 332.655 609.185 332.5L608.354 332.333C607.771 332.229 607.178 332.18 606.586 332.188 605.031 332.177 603.296 331.415 601.531 329.651 598.932 326.986 596.055 322.863 595.232 321.657 595.097 321.458 595.122 321.192 595.292 321.022L595.364 320.951C595.559 320.755 595.876 320.755 596.071 320.951L603.9 328.779C604.138 329.017 604.524 329.017 604.761 328.779 604.999 328.541 604.999 328.155 604.761 327.918L596.932 320.09C596.737 319.895 596.737 319.578 596.932 319.383L597.373 318.941C597.569 318.746 597.885 318.746 598.081 318.941L605.909 326.77C606.146 327.007 606.532 327.007 606.77 326.77 607.008 326.532 607.008 326.146 606.77 325.908L598.942 318.081C598.747 317.885 598.747 317.569 598.942 317.374L599.383 316.932C599.578 316.737 599.895 316.737 600.09 316.932L607.918 324.76C608.146 325.008 608.531 325.024 608.779 324.797 609.026 324.569 609.043 324.184 608.815 323.936 608.804 323.924 608.792 323.911 608.779 323.9L600.95 316.071C600.755 315.876 600.755 315.559 600.95 315.364L601.025 315.289C601.119 315.195 601.246 315.142 601.379 315.142 601.478 315.142 601.575 315.171 601.656 315.227 604.486 317.106 607.146 319.229 609.607 321.572 611.379 323.345 612.14 325.087 612.144 326.647 612.133 327.252 612.174 327.857 612.266 328.456L612.46 329.576C612.56 330.148 612.84 330.674 613.26 331.076L615.41 333.133 616.117 332.426 613.953 330.353C613.686 330.099 613.509 329.766 613.447 329.403L613.253 328.283C613.171 327.74 613.135 327.191 613.146 326.642 613.141 324.708 612.162 322.71 610.316 320.863 607.809 318.476 605.098 316.312 602.214 314.396 601.619 313.997 600.826 314.075 600.32 314.582L600.245 314.656C599.946 314.955 599.787 315.366 599.807 315.788 599.784 315.788 599.76 315.788 599.737 315.788 599.338 315.786 598.957 315.945 598.676 316.227L598.235 316.668C597.953 316.949 597.794 317.331 597.795 317.729 597.795 317.752 597.795 317.776 597.795 317.799 597.773 317.799 597.749 317.799 597.726 317.799 597.327 317.798 596.946 317.956 596.665 318.238L596.224 318.68C595.925 318.978 595.766 319.389 595.787 319.81 595.763 319.81 595.74 319.81 595.716 319.81 595.318 319.809 594.936 319.968 594.656 320.25L594.584 320.321C594.074 320.83 593.998 321.631 594.404 322.227 595.237 323.44 598.159 327.629 600.816 330.35 602.662 332.197 604.653 333.175 606.578 333.188Z"/>
+                                <path d="M623.657 339.644 622.992 340.391 635.03 351.917C635.917 352.76 635.953 354.163 635.109 355.051 634.266 355.938 632.863 355.973 631.976 355.13 631.951 355.106 631.926 355.082 631.903 355.057L618.907 341.589C618.695 341.534 618.477 341.471 618.245 341.389L617.794 341.874 631.183 355.75C632.417 357.028 634.453 357.063 635.73 355.829 637.008 354.595 637.044 352.56 635.81 351.282 635.781 351.252 635.751 351.223 635.721 351.194Z" />
+                                <path d="M637.429 317.35C636.986 316.754 636.292 316.396 635.55 316.382L635.5 316.382C634.717 316.382 633.966 316.697 633.416 317.254L615.116 335.554 597.176 352.516C595.897 353.726 595.84 355.744 597.05 357.023 597.653 357.66 598.49 358.021 599.366 358.021 600.253 358.019 601.099 357.649 601.703 357L617.845 339.616C618.585 339.989 619.391 340.213 620.218 340.274 620.721 340.298 621.21 340.105 621.56 339.742L632.715 327.22C635.627 323.953 637.354 321.362 637.851 319.521 638.049 318.771 637.894 317.971 637.429 317.35ZM636.885 319.26C636.56 320.466 635.422 322.679 631.968 326.556L620.826 339.064C620.662 339.216 620.441 339.293 620.218 339.274 619.4 339.274 618.157 338.661 617.605 338.404L600.97 356.322C600.144 357.204 598.76 357.25 597.877 356.424 596.995 355.598 596.949 354.214 597.775 353.331 597.803 353.301 597.833 353.271 597.863 353.242L615.81 336.271 634.12 317.961C634.483 317.591 634.978 317.383 635.496 317.381L635.53 317.381C636.347 317.42 636.977 318.114 636.938 318.931 636.933 319.043 636.915 319.153 636.885 319.26Z" />
+                                </g>
+                                </svg> 
+                                                                
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>            
+        </div>
+        <div class="news col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="container-fluid">
+                <div class="row" style="height:170px;">
+                    <div class="container buttonnews" style="margin-top:40px">
+                        <a href="GSNewsLetter_India.html" style="text-decoration:none">
+                            <div class="row text-center" style="height:50px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>GS News Letter<strong></p>
+                            </div>
+                            <div class="row text-center" style="height:115px">
+                                <img src="Assets/GSNewsLetter.svg" style="width:45px;height:45px;">
+                            </div>
+                        </a>
+                    </div>                    
+                </div>
+                <div class="row" style="height:170px;">
+                    <div class="container buttonnews" style="margin-top:24px">
+                        <a href="https://danfoss.sharepoint.com/sites/ExecutiveNewsBriefINR" style="text-decoration:none">
+                            <div class="row text-center" style="height:55px">
+                                <p class="newsbrief"><strong>Executive News Brief<strong></p>
+                            </div>
+                            <div class="row text-center" style="height:110px">
+                                <img src="Assets/GSNews.svg" style="width:40px;height:40px;">
+                            </div>
+                        </a>
+                    </div>                    
+                </div>
+                <div class="row" style="height:170px">
+                    <div class="container buttonnews" style="margin-top:10px">
+                        <a href="https://danfoss.sharepoint.com/sites/GSLT-API/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FGSLT%2DAPI%2FShared%20Documents%2FGeneral%2F2023&viewid=32b9dd78%2D2a3b%2D45cf%2Dbad9%2D0999e2183227" style="text-decoration:none">    
+                            <div class="row text-center" style="height:50px">
+                                <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>GSLT (API) Meeting</strong></p>
+                            </div>
+                            <div class="row text-center" style="height:115px">
+                                <img src="Assets/Meeting.svg" style="width:50px;height:50px;">
+                            </div>
+                        </a>    
+                    </div>                    
+                </div>
+            </div>            
+        </div>
+    </div> 
+    <div class="row text-center" style="margin-top:0.5%">        
+            <h5 style="color:#E2000F;font-weight: bold">           
+            <span class="big">S</span>eamless, <span class="big">S</span>mart and <span class="big">S</span>imple<span class="big">!</span>
+            </h5>         
+    </div> 
+</div>
+
+
+
+<div class="container-fluid ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+
+
+<script>
+    var items=document.querySelectorAll("#list li"),
+        tab = [], index;
+    //add values to tha array
+    for(var i=0;i<items.length;i++){
+        tab.push(items[i].innerHTML);
+    }
+    
+    //get selected element index
+    for(var i=0;i < items.length;i++){
+        items[i].onclick=function(){
+
+            index=tab.indexOf(this.innerHTML);
+            //console.log(this.innerHTML+"Index ="+index);
+            
+            if(index==0){
+                document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" India "+"<span class='caret'></span>";                                            
+            }
+            else if(index==1){
+                location.replace("SouthKorea.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" South Korea "+"<span class='caret'></span>";               
+            }
+            else if(index==2){
+                location.replace("Malaysia.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Malaysia "+"<span class='caret'></span>"; 
+            }
+            else if(index==3){
+                location.replace("Thailand.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Thailand "+"<span class='caret'></span>"; 
+            }
+            else if(index==4){
+                location.replace("Singapore.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Singapore "+"<span class='caret'></span>";  
+            }
+            else if(index==5){
+                location.replace("Taiwan.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Taiwan "+"<span class='caret'></span>"; 
+            }
+            else if(index==6){
+                location.replace("Australia.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Australia "+"<span class='caret'></span>";  
+            }
+            else if(index==7){
+                location.replace("NewZealand.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" New Zealand "+"<span class='caret'></span>";  
+            }
+            else if(index==8){
+                location.replace("Vietnam.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Vietnam "+"<span class='caret'></span>";  
+            }
+            else if(index==9){ 
+                location.replace("Philippines.html");               
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Philippines "+"<span class='caret'></span>";  
+            }   
+            else if(index==10){
+                location.replace("Indonesia.html");
+                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Indonesia "+"<span class='caret'></span>";  
+            }          
+        }
+    }
+
+    
+</script>
+
+<script>
+    const searchFun = () => {        
+        
+        var notfound=0;
+        let filter=document.getElementById('myInput').value.toUpperCase();
+
+        if(filter!=""){
+            document.getElementById('searchplatform').style.display="block"; 
+            
+        }
+        else
+        {
+            document.getElementById('searchplatform').style.display="none";
+            
+        }
+
+        let myTable=document.getElementById('myTable');
+
+        let tr = myTable.getElementsByTagName('tr');        
+        
+        for(var i=0;i<tr.length;i++){
+            
+            let td = tr[i].getElementsByTagName('td')[0];
+
+            if(td){
+                let textvlaue=td.textContent || td.innerHTML;
+
+                if(textvlaue.toUpperCase().indexOf(filter) > -1){
+                    
+                    tr[i].style.display = "";
+                      
+                                    
+                }                               
+                else{
+                    tr[i].style.display = "none";
+                    notfound++;  
+                                                  
+                }
+            }
+            
+        }
+        
+        if(notfound >= tr.length-1)
+        {
+            document.getElementById("noresult").style.display="";
+            document.getElementById("myTable").style.display="none";
+        }
+        else
+        {
+            document.getElementById("noresult").style.display="none";
+            document.getElementById("myTable").style.display="";
+        }
+          
+    }
+</script> 
+
+<script>
+    function countvisit(){
+        var PageCount = 1;        
+        var PageName = "India Home";
+        sendCount(PageCount,PageName);
+    }
+</script>
+<!--
+<script>
+    $(function() {  
+  $("#chat-circle").click(function() {    
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+    $("#searchplatform").css("opacity","0.2");
+    $("#dashboardplatform").css("opacity","0.2");
+  })
+  
+  $(".fa-times").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+    $("#searchplatform").css("opacity","1");
+    $("#dashboardplatform").css("opacity","1");
+  })  
+})
+</script>
+
+<script>
+    const text=document.querySelector('.text p');
+    text.innerHTML = text.innerText.split("").map(
+    (char,i) =>
+        `<span style="transform:rotate(${i*35}deg)">${char}</span>`
+    ).join("")
+</script>
+-->
+</body>
+</html>
